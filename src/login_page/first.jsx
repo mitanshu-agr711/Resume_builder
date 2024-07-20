@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 // import React, { useState } from 'react';
-
+import '../App.css';
 const FirstPage = () => {
   // const [template, setTemplate] = useState(0);
 
@@ -26,8 +26,8 @@ const FirstPage = () => {
   ];
 
   return (
-    <div className='h-sreen w-screen flex justify-around items-center bg-violet-200'>
-     <div>
+    <div className='h-sreen w-screen flex justify-center gap-8 items-center bg-violet-200'>
+     <div className='bg-violet-500 h-60 w-1/3'>
      <h1>Create own resume</h1>
          <Link to="/login">Login</Link>e
      </div>
