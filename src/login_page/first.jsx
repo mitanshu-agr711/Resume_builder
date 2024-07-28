@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 // import React, { useState } from 'react';
 import '../App.css';
 const FirstPage = () => {
@@ -26,22 +27,23 @@ const FirstPage = () => {
   ];
 
   return (
-    <div className='h-sreen w-screen flex justify-center gap-8 items-center bg-violet-200'>
-     <div className='bg-violet-500 h-60 w-1/3'>
-     <h1>Create own resume</h1>
-         <Link to="/login">Login</Link>e
-     </div>
+    <div className='h-screen w-screen flex justify-center gap-8 items-center bg-violet-200 sm:flex-wrap sm:flex-row'>
+      <div className='bg-violet-500 h-4/5 w-1/3 flex flex-col  items-center justify-center rounded-lg '>
+      <Link to="/login"> <img src='../public/images/undraw.png' alt='logo' className='w-1/2 h-auto rounded-full m-10' /></Link>
+        <h1 className=' flex flex-col justify-center items-center  rounded-lg m-5 font-get text-3xl'>Craft your personalized resume effortlessly on this platform</h1>
+        <Link to="/login" className='m-10 bg-violet-300 h-auto p-5 rounded-lg w-1/3  flex flex-col items-center font-get text-2xl'>Get Start</Link>
+      </div>
       <div className="w-1/2">
-      <Slider {...settings} className='w-full'>
-        {slides.map((slide, index) => (
-          <img
-            key={index}
-            src={slide.img}
-            alt={`img-${index}`}
-            className="w-auto max-h-screen justify-center"
-          />
-        ))}
-      </Slider>
+        <Slider {...settings} className='w-full'>
+          {slides.map((slide, index) => (
+            <img
+              key={index}
+              src={slide.img}
+              alt={`img-${index}`}
+              className="w-auto max-h-screen justify-center"
+            />
+          ))}
+        </Slider>
       </div>
     </div>
   );
