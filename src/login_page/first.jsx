@@ -2,12 +2,9 @@ import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// import React, { useState } from 'react';
 import '../App.css';
-const FirstPage = () => {
-  // const [template, setTemplate] = useState(0);
 
+const FirstPage = () => {
   const settings = {
     dots: false,
     speed: 3000,
@@ -27,23 +24,29 @@ const FirstPage = () => {
   ];
 
   return (
-    <div className='h-screen w-screen flex justify-center gap-8 items-center bg-violet-200 sm:flex-wrap sm:flex-row'>
-      <div className='bg-violet-500 h-4/5 w-1/3 flex flex-col  items-center justify-center rounded-lg '>
-      <Link to="/login"> <img src='../public/images/undraw.png' alt='logo' className='w-1/2 h-auto rounded-full m-10' /></Link>
-        <h1 className=' flex flex-col justify-center items-center  rounded-lg m-5 font-get text-3xl'>Craft your personalized resume effortlessly on this platform</h1>
-        <Link to="/login" className='m-10 bg-violet-300 h-auto p-5 rounded-lg w-1/3  flex flex-col items-center font-get text-2xl'>Get Start</Link>
-      </div>
-      <div className="w-1/2">
+    <div className='h-auto w-screen flex flex-col justify-center gap-8 items-center bg-violet-200'>
+      <div className="w-full tablet:w-4/5 sm:w-3/4">
         <Slider {...settings} className='w-full'>
           {slides.map((slide, index) => (
             <img
               key={index}
               src={slide.img}
               alt={`img-${index}`}
-              className="w-auto max-h-screen justify-center"
+              className="w-full max-h-screen"
             />
           ))}
         </Slider>
+      </div>
+      <div className='bg-violet-500 h-4/5 w-full flex flex-col items-center justify-center rounded-lg tablet:w-3/4 sm:bg-green'>
+        <Link to="/login" className='flex justify-center items-center w-full'>
+          <img src='../public/images/undraw.png' alt='logo' className='w-1/2 h-auto rounded-full m-10 sm:w-1/5' />
+        </Link>
+        <h1 className='flex flex-col justify-center items-center rounded-lg m-5 font-get text-3xl'>
+          Craft your personalized resume effortlessly on this platform
+        </h1>
+        <Link to="/login" className='m-10 bg-violet-300 h-auto p-5 rounded-lg w-1/2 flex flex-col items-center font-get text-2xl sm:w-3/4'>
+          Get Start
+        </Link>
       </div>
     </div>
   );
