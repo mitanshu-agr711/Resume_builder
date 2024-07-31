@@ -37,14 +37,14 @@ const FirstPage = () => {
           ))}
         </Slider>
       </div>
-      <div className='bg-violet-500 h-4/5 w-full flex flex-col items-center justify-center rounded-lg tablet:w-3/4 sm:bg-green'>
+      <div className='bg-violet-500 h-4/5 w-full flex flex-col items-center justify-center rounded-lg tablet:w-3/4'>
         <Link to="/login" className='flex justify-center items-center w-full'>
-          <img src='../public/images/undraw.png' alt='logo' className='w-1/2 h-auto rounded-full m-10 sm:w-1/5' />
+          <img src='../public/images/undraw.png' alt='logo' className='w-1/2 h-auto rounded-full m-10 ' />
         </Link>
         <h1 className='flex flex-col justify-center items-center rounded-lg m-5 font-get text-3xl'>
           Craft your personalized resume effortlessly on this platform
         </h1>
-        <Link to="/login" className='m-10 bg-violet-300 h-auto p-5 rounded-lg w-1/2 flex flex-col items-center font-get text-2xl sm:w-3/4'>
+        <Link to="/login" className='m-10 bg-violet-300 h-auto p-5 rounded-lg w-1/2 flex flex-col items-center font-get text-2xl sm:w-'>
           Get Start
         </Link>
       </div>
